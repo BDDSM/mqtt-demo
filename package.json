@@ -1,0 +1,22 @@
+{
+  "name": "mqtt-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "broker:start": "aedes --config ./aedes.config.js",
+    "browser:prepare": "browserify ./browser-client.js > browser-client.browserify.js",
+    "browser:start": "http-server .",
+    "client:start": "node ./server-client.js"
+  },
+  "dependencies": {
+    "aedes": "^0.44.0",
+    "aedes-cli": "^0.4.3",
+    "http-server": "^0.12.3",
+    "mqtt": "^4.2.4"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0"
+  }
+}
